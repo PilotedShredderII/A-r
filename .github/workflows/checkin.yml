@@ -1,0 +1,36 @@
+name: checkin
+
+on:
+  schedule:
+    - cron: '2 1 * * *'
+  
+  # 允许手动触发
+  workflow_dispatch:
+
+jobs:
+  checkin:
+    runs-on: ubuntu-latest
+    
+    steps:
+    # 检出代码
+    - name: 检出代码
+      uses: actions/checkout@v4
+    
+    # 设置 Python 环境
+    - name: 设置 Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    
+    # 安装依赖
+    - name: 安装依赖
+      run: |
+        pip install requests
+    
+    # 运行
+    - name: 执行checkin
+      env:
+        M_COOKIE: ${{ secrets.M_COOKIE }}
+        M_Stoken: ${{ secrets.M_Stoken }}
+      run: |
+        echo.|python main_multi.py
