@@ -2,9 +2,9 @@ enable: true
 version: 15
 push: ''
 account:
-  cookie:
+  cookie: '${M_COOKIE_Cris}'
   stuid: '160951948'
-  stoken:
+  stoken: '${M_Stoken_Cris}'
   mid: 0px3oxfnfh_mhy
 device:
   name: Xiaomi MI 6
@@ -89,3 +89,4 @@ competition:
 web_activity:
   enable: false
   activities: []
+
