@@ -1,0 +1,20 @@
+获取米游社 Cookie
+打开你的浏览器,进入无痕/隐身模式
+
+由于米哈游修改了 bbs 可以获取的 Cookie，导致一次获取的 Cookie 缺失，所以需要增加步骤
+
+打开https://www.miyoushe.com/ys/并进行登入操作
+
+按下键盘上的F12或右键检查,打开开发者工具,点击Source或源代码
+
+键盘按下Ctrl+F8或点击停用断点按钮，点击 ▌▶解除暂停
+
+点击NetWork或网络，在Filter或筛选器里粘贴 getUserGameUnreadCount，同时选择Fetch/XHR
+
+点击一条捕获到的结果，往下拉，找到Cookie:
+
+复制Cookie部分除Cookie:的全部内容
+
+将此处的复制到的 Cookie 先粘贴到 config 文件的 Cookie 处
+
+此时 Cookie 已经获取完毕了
