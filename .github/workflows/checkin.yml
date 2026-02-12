@@ -30,7 +30,12 @@ jobs:
     # 运行
     - name: 执行checkin
       env:
-        M_COOKIE: ${{ secrets.M_COOKIE }}
-        M_Stoken: ${{ secrets.M_Stoken }}
+        M_COOKIE_Rua: ${{ secrets.M_COOKIE_RUA }}
+        M_Stoken_Rua: ${{ secrets.M_Stoken_RUA }}
+        M_COOKIE_Cris: ${{ secrets.M_COOKIE_CRIS }}
+        M_Stoken_Cris: ${{ secrets.M_Stoken_CRIS }}
+        M_COOKIE_185: ${{ secrets.M_COOKIE_185 }}
+        M_COOKIE_Abi: ${{ secrets.M_COOKIE_ABI }}
+        M_COOKIE_Jia: ${{ secrets.M_COOKIE_JIA }}
       run: |
         echo.|python main_multi.py
