@@ -2,7 +2,7 @@ enable: true
 version: 15
 push: ''
 account:
-  cookie:
+  cookie: '${M_COOKIE_185}'
   stuid: ''
   stoken: StokenError
   mid: ''
@@ -89,3 +89,4 @@ competition:
 web_activity:
   enable: false
   activities: []
+
