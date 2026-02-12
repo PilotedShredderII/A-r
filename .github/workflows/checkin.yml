@@ -2,7 +2,7 @@ name: checkin
 
 on:
   schedule:
-    - cron: '25 1 * * *'
+    - cron: '43 1 * * *'
   
   # 允许手动触发
   workflow_dispatch:
