@@ -20,7 +20,7 @@ def find_config(ext: str) -> list:
         list: 符合条件的配置文件名列表
     """
     file_name = []
-    for files in os.listdir(config.path):
+    for files in sorted(os.listdir(config.path)):
         if os.path.splitext(files)[1] == ext:
             if config.config_prefix == "" or files.startswith(config.config_prefix):
                 file_name.append(files)
