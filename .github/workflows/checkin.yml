@@ -55,5 +55,6 @@ jobs:
     - name: 执行checkin
       env:
         AutoMihoyoBBS_autorun: "1"
+        GITHUB_ACTIONS: "false"
       run: |
         python m-BBS/main_multi.py
