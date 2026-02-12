@@ -38,4 +38,22 @@ jobs:
         M_COOKIE_Abi: ${{ secrets.M_COOKIE_ABI }}
         M_COOKIE_Jia: ${{ secrets.M_COOKIE_JIA }}
       run: |
-        echo.|python main_multi.py
+        # 安装 envsubst
+        sudo apt-get update && sudo apt-get install -y gettext
+        
+        # 替换所有 yaml 文件
+        for file in config/*.yaml config/*.yml; do
+          [ -e "$file" ] || continue
+          echo "处理: $file"
+          envsubst < "$file" > "${file}.tmp"
+          mv "${file}.tmp" "$file"
+        done
+        
+        echo "✅ 配置文件已更新"
+    
+    # ========== 运行步骤（不需要 env，因为值已在 yaml 里）==========
+    - name: 执行checkin
+      env:
+        AutoMihoyoBBS_autorun: "1"
+      run: |
+        python main_multi.py
