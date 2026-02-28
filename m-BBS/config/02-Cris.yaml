@@ -15,7 +15,6 @@ mihoyobbs:
   enable: true
   checkin: true
   checkin_list:
-  - 5
   - 2
   read: true
   like: true
@@ -89,4 +88,5 @@ competition:
 web_activity:
   enable: false
   activities: []
+
 
