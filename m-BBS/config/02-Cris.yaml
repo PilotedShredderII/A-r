@@ -15,7 +15,7 @@ mihoyobbs:
   enable: true
   checkin: true
   checkin_list:
-  - 2
+  - 5
   read: true
   like: true
   cancel_like: true
@@ -25,7 +25,7 @@ games:
     enable: true
     useragent: Mozilla/5.0 (Linux; Android 12; Unspecified Device) AppleWebKit/537.36
       (KHTML, like Gecko) Version/4.0 Chrome/103.0.5060.129 Mobile Safari/537.36
-    retries: 3
+    retries: 1
     genshin:
       checkin: true
       black_list: []
@@ -88,5 +88,6 @@ competition:
 web_activity:
   enable: false
   activities: []
+
 
 
