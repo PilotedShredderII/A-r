@@ -6,6 +6,9 @@ on:
   
   # 允许手动触发
   workflow_dispatch:
+  
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   checkin:
