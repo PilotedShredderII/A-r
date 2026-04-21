@@ -12,7 +12,7 @@ device:
   id: ''
   fp: ''
 mihoyobbs:
-  enable: true
+  enable: false
   checkin: true
   checkin_list:
   - 2
